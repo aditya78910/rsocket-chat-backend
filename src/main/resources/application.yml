@@ -1,0 +1,22 @@
+spring:
+  rsocket:
+    server:
+      transport: websocket
+      mapping-path: /rsocket
+      port: 8080
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017,localhost:27018,localhost:27019/test?replicaSet=rs0
+
+messages:
+  pageSize: 10
+logging:
+  level:
+    org:
+      springframework:
+        data: TRACE
+      mongodb: TRACE
+
+server:
+  port: 8090
+
